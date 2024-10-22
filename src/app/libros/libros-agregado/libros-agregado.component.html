@@ -1,0 +1,45 @@
+<div class="card">
+    <div class="card-header">Agreagar Libros </div>
+    <div class="card-body">
+        
+        <form [formGroup]="formularioDeLibros" (submit)="cargarLibros()">
+
+            <div class="mb-3">
+                <label for="" class="form-label">Titulo</label>
+                <input type="text"class="form-control" name="" formControlName="libTitulo" id="" placeholder="Escribe un titulo" />
+            </div>
+
+
+            <div class="mb-3"> 
+                <label for="" class="form-label">Año</label>
+                <input type="text" class="form-control" formControlName="libAnio" placeholder="Ingrese el año">
+
+            </div>
+            <div class="mb-3"> 
+                 <label for="" class="form-label">Signatura</label>
+                <input type="text"class="form-control" formControlName="SigTopograficaID" placeholder="Escribe el ID de signatura"/>
+            </div>
+
+            <div class="mb-3">  
+                <label for="" class="form-label">Editorial</label>
+                <input type="text"class="form-control" formControlName="EditorialID" placeholder="Escribe el ID de Editorial"/>
+            </div>
+
+            <div class="mb-3"> 
+                 <label for="" class="form-label">Materia</label>
+                  <input type="text" class="form-control" formControlName="MateriaID" placeholder="Escribe el ID de Materia"/>
+            </div>
+
+            <div class="mb-3"> 
+                 <label for="" class="form-label">Contenido</label>
+                <input  type="text" class="form-control" formControlName="libNotaContenido" placeholder="Escribe la Nota Contenido"/>
+            </div>
+
+            <div class="btn-group" role="group" aria-label="">
+
+                <button type="submit" class="btn btn-success">Agregar</button>
+                <button type="button" class="btn btn-primary" routerLink="/biblioteca/libros-listado">Cancelar</button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<div class="card m-5">
+  <div class="card-header">Listado de Libros
+      <button class="btn btn-success float-right" [routerLink]="['/biblioteca/libros-agregado']">
+          Agregar Libro
+      </button>
+    
+      <div class="card">
+        <div class="card-body">
+          <div
+            class="table-responsive"
+          >
+            <table
+                class="table table-primary"
+            >
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th >Titulo</th>
+                        <th>Año</th>
+                        <th >Signatura</th>
+                        <th >Editorial</th>
+                        <th >Materia</th>
+                        <th >Contenido</th>
+                        <th> Acciones</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                <tr *ngFor="let libro of Libro; let iControl=index">
+                    <td>{{libro.idLibro}}</td>
+                    <td>{{libro.libTitulo}}</td>
+                    <td>{{libro.libAnio}}</td>
+                    <td>{{libro.sigtopografica}} </td>
+                    <td> {{libro.editorial}}</td>
+                    <td>{{libro.materia}} </td>
+                    <td>{{libro.libNotaContenido}} </td>
+                    <td> 
+                    <a class="btn btn-warning"  routerLink="/biblioteca/libros-editado/{{libro.idLibro}}">Editar</a>
+
+                    <a class="btn btn-danger"   (click)="borrarLibro( libro.idLibro ,iControl)" role="button"  >Borrar</a>
+
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+          </div>
+          
+        </div>
+      
+      </div>
+      
+  </div>

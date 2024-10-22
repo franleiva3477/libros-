@@ -1,0 +1,46 @@
+<div class="card">
+    <div class="card-header">Editar Libros </div>
+    <div class="card-body">
+        
+        <form [formGroup]="formularioDeLibros" >
+
+            <div class="mb-3">
+                <label for="" class="form-label">Titulo</label>
+                <input
+                    type="text"
+                   class="form-control" formControlName="libTitulo" aria-describedby="helpId" placeholder="Escribe un titulo"
+                   />
+            </div>
+            <div class="mb-3">  <label for="" class="form-label">Año</label>
+                <input
+                    type="text"
+                   class="form-control" formControlName="libAnio" aria-describedby="helpId" placeholder="Escribe el Año"
+            /></div>
+            <div class="mb-3">  <label for="" class="form-label">SigTopograficaID</label>
+                <input
+                    type="text"
+                   class="form-control"  formControlName="SigTopograficaID" aria-describedby="helpId" placeholder="Escribe la signatura"/>
+            </div>
+            <div class="mb-3">  <label for="" class="form-label">EditorialID</label>
+                <input
+                    type="text"
+                   class="form-control"  formControlName="EditorialID" aria-describedby="helpId" placeholder="Escribe la Editorial"/>
+            </div>
+            <div class="mb-3">  <label for="" class="form-label">MateriaID</label>
+                <input
+                    type="text"
+                   class="form-control"  formControlName="MateriaID" aria-describedby="helpId" placeholder="Escribe la Materia"/>
+            </div>
+            <div class="mb-3">  <label for="" class="form-label">Contenido</label>
+                <input
+                    type="text"
+                   class="form-control"  formControlName="libNotaContenido" aria-describedby="helpId" placeholder="Escribe la Nota Contenido"/>
+            </div>
+
+            <div class="btn-group" role="group" aria-label="">
+                <button type="submit" class="btn btn-success">Agregar</button>
+                <button type="button" class="btn btn-primary" routerLink="/biblioteca/libros-listado">Cancelar</button>
+            </div>
+        </form>
+    </div>
+</div>
