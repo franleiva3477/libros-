@@ -37,7 +37,7 @@ export class LibrosAgregadoComponent implements OnInit{
     console.log(this.formularioDeLibros.value);
     this.servicioLibros.agregarLibros(this.formularioDeLibros.value).subscribe();
 
-    this.routeador.navigateByUrl('/biblioteca/libros-listado'); 
+    this.routeador.navigateByUrl('libros-listado'); 
 
   }
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <div class="card m-5">
   <div class="card-header">Listado de Libros
-      <button class="btn btn-success float-right" [routerLink]="['/biblioteca/libros-agregado']">
+      <button class="btn btn-success float-right" [routerLink]="['/libros-agregado']">
           Agregar Libro
       </button>
     
@@ -37,7 +37,7 @@
                     <td>{{libro.materia}} </td>
                     <td>{{libro.libNotaContenido}} </td>
                     <td> 
-                    <a class="btn btn-warning"  routerLink="/biblioteca/libros-editado/{{libro.idLibro}}">Editar</a>
+                    <a class="btn btn-warning"  routerLink="libros-editado/{{libro.idLibro}}">Editar</a>
 
                     <a class="btn btn-danger"   (click)="borrarLibro( libro.idLibro ,iControl)" role="button"  >Borrar</a>
 

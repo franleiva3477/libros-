@@ -5,10 +5,13 @@ import { LibrosAgregadoComponent } from './libros/libros-agregado/libros-agregad
 import { LibrosEditadoComponent } from './libros/libros-editado/libros-editado.component';
 
 const routes: Routes = [
-  { path: 'libros-listado', component: LibrosListadoComponent },
+
+    { path: '', redirectTo: 'libros-listado', pathMatch: 'full' }, // redirige al listado
+    { path: 'libros-listado', component: LibrosListadoComponent },
     { path: 'libros-agregado', component: LibrosAgregadoComponent },
     { path: 'libros-editado/:id', component: LibrosEditadoComponent }
-];
+  ];
+  
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
